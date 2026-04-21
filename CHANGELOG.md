@@ -60,7 +60,7 @@ Categories Used:
 - Fix renaming broken when multi extension paths (https://github.com/ouch-org/ouch/pull/919)
 - Fix incorrectly overwriting input file when file signature is sniffed (https://github.com/ouch-org/ouch/pull/920)
 - Add safeguards before deleting directories (https://github.com/ouch-org/ouch/pull/930)
-- Fix directory display with trailing slashes in list output (https://github.com/ouch-org/ouch/commit/de22cbc)
+- Fix directory display with trailing slashes in list output (https://github.com/ouch-org/ouch/pull/952)
 
 ### Tweaks
 
