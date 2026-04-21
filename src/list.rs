@@ -61,14 +61,16 @@ fn print_entry(out: &mut impl Write, name: impl fmt::Display, is_dir: bool) {
 
     // Handle directory display
     let name_str = name.to_string();
-    let display_name = name_str.strip_suffix('/').unwrap_or(&name_str);
+    // Strip trailing slashes so we can consistently re-add one when needed.
+    // This handles CLI `zip` which includes / in directory paths.
+    let display_name = name_str.trim_end_matches('/');
 
     let output = if BLUE.is_empty() {
-        // Colors are deactivated, print final / to mark directories
+        // Colors deactivated, print final / to mark directories
         format!("{display_name}/")
     } else if is_running_in_accessible_mode() {
-        // Accessible mode: use colors but print final / for screen readers
-        format!("{}{}{}/{}", *BLUE, *STYLE_BOLD, display_name, *ALL_RESET)
+        // Accessible mode: colors + trailing / for screen readers
+        format!("{}{}{display_name}/{}", *BLUE, *STYLE_BOLD, *ALL_RESET)
     } else {
         // Normal mode: use colors without trailing slash
         format!("{}{}{}{}", *BLUE, *STYLE_BOLD, display_name, *ALL_RESET)
