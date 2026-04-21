@@ -17,6 +17,10 @@ Categories Used:
 
 ## [Unreleased](https://github.com/ouch-org/ouch/compare/0.7.0...HEAD)
 
+### Bug Fixes
+
+- Fix directory display with trailing slashes in list output (https://github.com/ouch-org/ouch/pull/952)
+
 ## [0.7.0](https://github.com/ouch-org/ouch/compare/0.6.1...0.7.0)
 
 ### Removals
@@ -62,7 +66,6 @@ Categories Used:
 - Fix renaming broken when multi extension paths (https://github.com/ouch-org/ouch/pull/919)
 - Fix incorrectly overwriting input file when file signature is sniffed (https://github.com/ouch-org/ouch/pull/920)
 - Add safeguards before deleting directories (https://github.com/ouch-org/ouch/pull/930)
-- Fix directory display with trailing slashes in list output (https://github.com/ouch-org/ouch/pull/952)
 
 ### Tweaks
 
