@@ -17,9 +17,17 @@ Categories Used:
 
 ## [Unreleased](https://github.com/ouch-org/ouch/compare/0.7.0...HEAD)
 
+### Removals
+
+### New Features
+
+### Improvements
+
 ### Bug Fixes
 
 - Fix directory display with trailing slashes in list output (https://github.com/ouch-org/ouch/pull/952)
+
+### Tweaks
 
 ## [0.7.0](https://github.com/ouch-org/ouch/compare/0.6.1...0.7.0)
 
